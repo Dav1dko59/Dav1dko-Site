@@ -1,61 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje jednoduchá stránka</title>
+    <title>Jednoduchá stránka s obrázkem</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Vítejte na mé stránce!</h1>
-</header>
-
-<main>
-    <h2>O mně</h2>
-    <p>Ahoj! Jsem nadšený webový vývojář a rád se učím nové technologie.</p>
-
-    <h2>Moje zájmy</h2>
-    <ul>
-        <li>Programování</li>
-        <li>Design</li>
-        <li>Cestování</li>
-        <li>Fotografie</li>
-    </ul>
-
-    <h2>Kontakt</h2>
-    <p>Pokud mě chcete kontaktovat, můžete mi napsat na <a href="mailto:example@example.com">example@example.com</a>.</p>
-</main>
-
-<footer>
-    <p>&copy; 2023 Moje jednoduchá stránka</p>
-</footer>
-
+    <img src="https://images.unsplash.com/photo-1555685812-1b0e1b1c1c1e" alt="Kočka" style="max-width: 100%; height: auto;" />
 </body>
 </html>
