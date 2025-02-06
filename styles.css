@@ -50,6 +50,8 @@ body {
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    display: inline-block; /* Aby transform fungoval */
+    transform: translateY(0);
 }
 .dada-text:hover {
     background: linear-gradient(45deg, #e74c3c, #f1c40f); /* Změna gradientu */
