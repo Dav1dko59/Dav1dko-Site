@@ -1,5 +1,4 @@
 body {
-    margin-left: 50px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -34,6 +33,7 @@ body {
     transition: transform 0.3s ease;
     position: relative;
     z-index: 1; /* Text bude nad hvězdami */
+    margin-left: 50px;
 }
 
 .dada-text {
