@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    padding: 0px;
+    padding: 2rem;
     border-radius: 0px;
     transition: transform 0.3s ease;
     position: relative;
