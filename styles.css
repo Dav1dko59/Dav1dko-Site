@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    background: transparent !important; /* Důležité pro průhledné pozadí */
 }
 
 .hvezdy {
@@ -15,9 +16,8 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #000;
-    overflow: hidden;
-    z-index: -1;
+    background: #000; /* Černé pozadí pro hvězdnou oblohu */
+    z-index: 0; /* Upraveno z -1 */
 }
 
 .hvezda {
@@ -32,10 +32,7 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease;
     position: relative;
-}
-
-.container:hover {
-    transform: scale(1.05);
+    z-index: 1; /* Text bude nad hvězdami */
 }
 
 .dada-text {
