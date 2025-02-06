@@ -67,7 +67,7 @@ body {
     padding: 2rem;
     border-radius: 0px;
     transition: transform 0.3s ease;
-    position: absolute;
+    position: relative;
     z-index: 1; /* Text bude nad hvězdami */
     margin-left: 20px;
     left: 50px; /* Vzdálenost od levého okraje */
