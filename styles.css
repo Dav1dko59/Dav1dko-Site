@@ -67,14 +67,13 @@ body {
     padding: 2rem;
     border-radius: 0px;
     transition: transform 0.3s ease;
-    position: relative;
+    position: absolute;
     z-index: 1; /* Text bude nad hvězdami */
-    margin-left: 20px;
-    left: 50px; /* Vzdálenost od levého okraje */
-    top: 50%; /* Posune horní okraj kontejneru do středu */
+    right: 15%; /* Vzdálenost od levého okraje */
+    top: 15%; /* Posune horní okraj kontejneru do středu */
     transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
-    height: 20px;
-    width: 40px;
+    height: 100px;
+    width: 200px;
     
 }
 .update-text {
