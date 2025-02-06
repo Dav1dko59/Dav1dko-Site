@@ -88,9 +88,6 @@ body {
     transform: translateY(0);
     transition: transform 0.3s ease;
     transform-origin: right;
-    position: absolute;
-    top: 50%;
-    left: 50%;
 }
 .update-text:hover{
    transform: scale(1.1) translateX(-10px); /* Posun doľava */
