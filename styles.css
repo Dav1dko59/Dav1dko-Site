@@ -73,10 +73,12 @@ body {
     left: 50px; /* Vzdálenost od levého okraje */
     top: 50%; /* Posune horní okraj kontejneru do středu */
     transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
+    height: 200px;
+    width: 400px;
     
 }
 .update-text {
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(2rem, 20vw, 5rem);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: -2px;
