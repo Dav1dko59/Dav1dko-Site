@@ -68,11 +68,10 @@ body {
     transition: transform 0.3s ease;
     position: absolute;
     z-index: 1; /* Text bude nad hvězdami */
-    right: 3%; /* Vzdálenost od levého okraje */
+    right: 3%; 
     top: 7%; /* Posune horní okraj kontejneru do středu */
-    transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
     height: 10%;
-    width: 25%;
+    width: 15%;
     
 }
 .update-text {
