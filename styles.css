@@ -70,7 +70,7 @@ body {
     position: absolute;
     z-index: 1; /* Text bude nad hvězdami */
     margin-left: 20px;
-    left: 400px; /* Vzdálenost od levého okraje */
+    left: 50px; /* Vzdálenost od levého okraje */
     top: 50%; /* Posune horní okraj kontejneru do středu */
     transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
     
