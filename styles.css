@@ -71,8 +71,8 @@ body {
     right: 3%; /* Vzdálenost od levého okraje */
     top: 7%; /* Posune horní okraj kontejneru do středu */
     transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
-    height: 100px;
-    width: 250px;
+    height: 10%;
+    width: 25%;
     
 }
 .update-text {
