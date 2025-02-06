@@ -78,7 +78,7 @@ body {
     
 }
 .update-text {
-    font-size: clamp(2rem, 20vw, 5rem);
+    font-size: clamp(2rem, 5vw, 5rem);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: -2px;
