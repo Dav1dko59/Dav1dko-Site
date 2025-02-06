@@ -36,7 +36,7 @@ body {
     margin-left: 50px;
     left: 10px; /* Vzdálenost od levého okraje */
     top: 50%; /* Posune horní okraj kontejneru do středu */
-    /*transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
+    transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
 }
 
 .dada-text {
