@@ -49,13 +49,15 @@ body {
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
     display: inline-block; /* Aby transform fungoval */
     transform: translateY(0);
+    transition: transform 0.3s ease; /* Přidáno pro plynulé zvětšení */
+    transform-origin: left; /* Mění bod, od kterého se zvětšuje (nastav dle potřeby) */
 }
 .dada-text:hover {
     background: linear-gradient(45deg, #e74c3c, #f1c40f); /* Změna gradientu */
     text-shadow: 4px 4px 8px rgba(0,0,0,0.3); /* Silnější stín */
+    transform: scale(1.1);
 }
 
 @keyframes twinkle {
