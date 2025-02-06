@@ -63,7 +63,7 @@ body {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; transform: scale(1.5); }
 }
-.update_switch {
+.update-switch {
     padding: 2rem;
     border-radius: 0px;
     transition: transform 0.3s ease;
@@ -75,7 +75,7 @@ body {
     transform: translateY(-50%); /* "Vycentruje" vertikálně celý kontejner */
     
 }
-.update_text {
+.update-text {
     font-size: clamp(2rem, 8vw, 5rem);
     font-weight: bold;
     text-transform: uppercase;
@@ -90,7 +90,7 @@ body {
     transition: transform 0.3s ease;
     transform-origin: left;
 }
-.update_text:hover{
+.update-text:hover{
     transform: scale(1.1) translateY(0); /* Zde je klíčová změna */
     text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
 }
