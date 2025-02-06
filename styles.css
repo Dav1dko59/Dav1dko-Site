@@ -49,17 +49,16 @@ body {
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    display: inline-block; /* Aby transform fungoval */
+    display: inline-block;
     transform: translateY(0);
-    transition: transform 0.3s ease; /* Přidáno pro plynulé zvětšení */
-    transform-origin: left; /* Mění bod, od kterého se zvětšuje (nastav dle potřeby) */
-}
-.dada-text:hover {
-    background: linear-gradient(45deg, #2c3e50, #3498db); /* ⚠️ Přidej zpět gradient */
-    transform: scale(1.1);
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    transform-origin: left;
 }
 
+.dada-text:hover {
+    transform: scale(1.1) translateY(0); /* Zde je klíčová změna */
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+}
 @keyframes twinkle {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; transform: scale(1.5); }
