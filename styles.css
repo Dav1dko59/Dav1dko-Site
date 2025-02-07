@@ -69,7 +69,7 @@ body {
     position: absolute;
     z-index: 1; /* Text bude nad hvězdami */
     right: 1%; 
-    top: 7%; /* Posune horní okraj kontejneru do středu */
+    top: 1%; /* Posune horní okraj kontejneru do středu */
     height: 10%;
     width: 15%;
     display: flex;
@@ -109,8 +109,8 @@ body {
   left: 0;         /* Zarovnání doleva */
   right: 0;        /* Zarovnání doprava (pro centrování) */
   text-align: center; /* Centrování textu */
-  font-size: 20px; /* Velikost textu */
-  color: rgba(217, 217, 217, 0.5);     /* Barva textu */
+  font-size: 17px; /* Velikost textu */
+  color: rgba(217, 217, 217, 0.75);     /* Barva textu */
   padding: 10px;   /* Odsazení od okrajů */
   font-weight: 200;
   pointer-events: none;
