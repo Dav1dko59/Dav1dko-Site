@@ -92,7 +92,7 @@ body {
     transition: transform 0.3s ease;
     transform-origin: right;
 }
-.update-text:hover{
+.update-switch:hover{
    transform: scale(1.1) translateX(-10px); /* Posun doľava */
   transform-origin: right; /* Zabezpečí, že scaling začína sprava */
   text-shadow: -4px 4px 8px rgba(0,0,0,0.3); /* Tieň na ľavej strane */
