@@ -114,6 +114,7 @@ body {
   padding: 10px;   /* Odsazení od okrajů */
   font-weight: 200;
   pointer-events: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
   .footer-text {
