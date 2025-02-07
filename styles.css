@@ -65,7 +65,7 @@ body {
 }
 .update-switch {
     border-radius: 0px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
     position: absolute;
     z-index: 1; /* Text bude nad hvězdami */
     right: 1%; 
@@ -93,9 +93,9 @@ body {
     transform-origin: right;
 }
 .update-switch:hover{
-   transform: scale(1.1) translateX(-10px); /* Posun doľava */
+  transform: scale(1.1) translateX(-10px); /* Posun doľava */
   transform-origin: right; /* Zabezpečí, že scaling začína sprava */
-  text-shadow: -4px 4px 8px rgba(0,0,0,0.3); /* Tieň na ľavej strane */
+  text-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3); /* Tieň na ľavej strane */
 }
 
 
