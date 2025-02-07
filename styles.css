@@ -110,7 +110,7 @@ body {
   right: 0;        /* Zarovnání doprava (pro centrování) */
   text-align: center; /* Centrování textu */
   font-size: 20px; /* Velikost textu */
-  color: #D9D9D9;     /* Barva textu */
+  color: rgba(217, 217, 217, 0.5);     /* Barva textu */
   padding: 10px;   /* Odsazení od okrajů */
   font-weight: 200;
   pointer-events: none;
