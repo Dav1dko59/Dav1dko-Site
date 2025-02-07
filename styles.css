@@ -72,9 +72,10 @@ body {
     top: 7%; /* Posune horní okraj kontejneru do středu */
     height: 10%;
     width: 15%;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
+    will-change: transform, text-shadow;
     
 }
 .update-text {
@@ -91,7 +92,7 @@ body {
     transform: translateY(0);
     transition: transform 0.3s ease;
     transform-origin: right;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 .update-switch:hover{
   transform: scale(1.1) translateX(-10px); /* Posun doľava */
