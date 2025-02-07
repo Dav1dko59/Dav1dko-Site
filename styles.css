@@ -72,10 +72,9 @@ body {
     top: 7%; /* Posune horní okraj kontejneru do středu */
     height: 10%;
     width: 15%;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
-    will-change: transform, text-shadow;
     
 }
 .update-text {
