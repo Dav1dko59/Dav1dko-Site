@@ -105,14 +105,13 @@ body {
 
 .footer-text {
   position: fixed; /* Text zůstane dole i při scrollování */
-  bottom: 0;      /* Přichytí text k dolní hraně */
+  bottom: 20px;      /* Přichytí text k dolní hraně */
   left: 0;         /* Zarovnání doleva */
   right: 0;        /* Zarovnání doprava (pro centrování) */
   text-align: center; /* Centrování textu */
-  font-size: 12px; /* Velikost textu */
-  color: #666;     /* Barva textu */
+  font-size: 30px; /* Velikost textu */
+  color: #D9D9D9;     /* Barva textu */
   padding: 10px;   /* Odsazení od okrajů */
-  background: white; /* Pozadí (volitelné) */
 }
 @media (max-width: 768px) {
   .footer-text {
