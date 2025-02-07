@@ -112,6 +112,7 @@ body {
   font-size: 25px; /* Velikost textu */
   color: #D9D9D9;     /* Barva textu */
   padding: 10px;   /* Odsazení od okrajů */
+  font-weight: lighter;
 }
 @media (max-width: 768px) {
   .footer-text {
