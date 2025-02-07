@@ -91,6 +91,7 @@ body {
     transform: translateY(0);
     transition: transform 0.3s ease;
     transform-origin: right;
+    margin-right: 30px;
 }
 .update-switch:hover{
   transform: scale(1.1) translateX(-10px); /* Posun doľava */
