@@ -103,4 +103,20 @@ body {
   text-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3); /* Tieň na ľavej strane */
 }
 
-
+.footer-text {
+  position: fixed; /* Text zůstane dole i při scrollování */
+  bottom: 0;      /* Přichytí text k dolní hraně */
+  left: 0;         /* Zarovnání doleva */
+  right: 0;        /* Zarovnání doprava (pro centrování) */
+  text-align: center; /* Centrování textu */
+  font-size: 12px; /* Velikost textu */
+  color: #666;     /* Barva textu */
+  padding: 10px;   /* Odsazení od okrajů */
+  background: white; /* Pozadí (volitelné) */
+}
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
