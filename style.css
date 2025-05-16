@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #5f5fc9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 70px;
+}
+.sidebar nav a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-family: 'open sans';
+  font-size: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 15px;
+}
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sidebar img.icons_nav {
+  width: 35px;
+}
+.sidebar img.main_logo {
+  border-radius: 50px;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  user-select: none;
+}
+.sidebar h1.jmeno {
+  font-size: 35px;
+  font-family: 'open sans';
+  color: azure;
+  text-align: center;
+  font-weight: 700;
+}
