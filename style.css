@@ -6,7 +6,7 @@
   top: 0;
   width: 250px;
   height: 100vh;
-  background-color: #5f5fc9;
+  background-image: linear-gradient(#5e5fc9, #5ec9c9);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 }
 .sidebar nav a {
   text-decoration: none;
-  color: #ccc;
+  color: #070707;
   padding: 10px;
   border-radius: 6px;
   transition: background 0.3s;
@@ -34,6 +34,7 @@
   flex-direction: column;
   gap: 20px;
   padding-left: 15px;
+  font-weight: bold;
 }
 .sidebar li {
   display: flex;
@@ -57,5 +58,6 @@
   font-weight: 700;
 }
 li a:hover {
-  color: rgb(22, 94, 158);
+  color: #dde6ff;
+  transition: 0.2s;
 }
