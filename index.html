@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="images/favicon.svg" />
   </head>
   <body>
+    <button class="hamburger" aria-label="Otevřít menu">&#9776;</button>
     <ul>
       <div class="sidebar">
         <img src="images/LOGO.png" alt="logo" class="main_logo" />
@@ -61,5 +62,13 @@
         <p>Jsem David, programátor a webový nadšenec. Tady je něco o mně...</p>
       </section>
     </main>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const sidebar = document.querySelector('.sidebar');
+
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

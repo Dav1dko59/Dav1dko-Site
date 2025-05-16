@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-@media screen and (max-width: 768px) {
-  .sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 10px;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -99,4 +82,44 @@ li a:hover {
 
 .sidebar li:hover img {
   fill: #dde6ff;
+}
+
+.hamburger {
+  display: none; /* defaultně skryté na desktopu */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 20; /* nad sidebarem */
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* posunutý mimo obrazovku */
+    width: 250px;
+    height: 100vh;
+    background-image: linear-gradient(#5e5fc9, #5ec9c9);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 15;
+  }
+
+  .sidebar.active {
+    left: 0; /* vysunutý viditelně */
+  }
+
+  main {
+    margin-left: 0; /* na mobilu chceš hlavní obsah přes celou šířku */
+    padding: 20px;
+  }
 }
