@@ -13,45 +13,56 @@
     <link rel="apple-touch-icon" href="images/favicon.svg" />
   </head>
   <body>
-    <button class="hamburger" aria-label="Otevřít menu">&#9776;</button>
-    <ul>
-      <div class="sidebar">
-        <img src="images/LOGO.png" alt="logo" class="main_logo" />
-        <h1 class="jmeno">David Janoušek</h1>
-        <nav>
-          <ul>
-            <li>
-              <img
-                src="images/home_icon.svg"
-                alt="home_icon"
-                class="icons_nav"
-              /><a href="#home">Domů</a>
-            </li>
-            <li>
-              <img
-                src="images/user_icon.svg"
-                alt="user_icon"
-                class="icons_nav"
-              /><a href="#about">O mně</a>
-            </li>
-            <li>
-              <img
-                src="images/projects_icon.svg"
-                alt="projects_icon"
-                class="icons_nav"
-              /><a href="#">Projekty</a>
-            </li>
-            <li>
-              <img
-                src="images/contact_icon.svg"
-                alt="contact_icon"
-                class="icons_nav"
-              /><a href="#">Kontakt</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </ul>
+    <button class="hamburger" aria-label="Otevřít menu">☰</button>
+
+    <div class="sidebar">
+      <img src="images/LOGO.png" alt="logo" class="main_logo" />
+      <h1 class="jmeno">David Janoušek</h1>
+      <nav>
+        <ul>
+          <li>
+            <img
+              src="images/home_icon.svg"
+              alt="home_icon"
+              class="icons_nav"
+            /><a href="#home">Domů</a>
+          </li>
+          <li>
+            <img
+              src="images/user_icon.svg"
+              alt="user_icon"
+              class="icons_nav"
+            /><a href="#about">O mně</a>
+          </li>
+          <li>
+            <img
+              src="images/projects_icon.svg"
+              alt="projects_icon"
+              class="icons_nav"
+            /><a href="#">Projekty</a>
+          </li>
+          <li>
+            <img
+              src="images/contact_icon.svg"
+              alt="contact_icon"
+              class="icons_nav"
+            /><a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav>
+        <ul>
+          <li><a href="#home">Domů</a></li>
+          <li><a href="#about">O mně</a></li>
+          <li><a href="#">Projekty</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <main>
       <section
         id="home"
@@ -61,17 +72,18 @@
         <h2>Domů</h2>
         <p>Vítej na mém portfoliu!</p>
       </section>
-      <section id="about" style="height: 100vh; background: rgb(255, 255, 255)">
+      <section id="about" style="height: 100vh; background: white">
         <h2>O mně</h2>
         <p>Jsem David, programátor a webový nadšenec. Tady je něco o mně...</p>
       </section>
     </main>
+
     <script>
       const hamburger = document.querySelector('.hamburger');
-      const sidebar = document.querySelector('.sidebar');
+      const mobileMenu = document.getElementById('mobileMenu');
 
       hamburger.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
       });
     </script>
   </body>

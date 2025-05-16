@@ -1,45 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-body {
-  display: flex;
-  height: 100vh; /* výška viewportu */
-  flex-direction: row; /* default, vedle sebe */
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
   height: 100%;
 }
-main {
-  margin-left: 290px; /* aby nezačínal pod sidebar */
-  flex: 1; /* hlavní obsah zabírá zbytek místa */
+
+body {
+  display: flex;
   height: 100vh;
-  overflow-y: auto; /* pro vertikální scroll obsahu */
+  flex-direction: row;
+}
+
+main {
+  margin-left: 235px;
+  flex: 1;
   box-sizing: border-box;
   background-color: #fff;
 }
+
 .sidebar {
-  width: 290px; /* pevná šířka sidebaru */
-  height: 100vh; /* na výšku celé obrazovky */
+  width: 290px;
+  height: 100vh;
   background-image: linear-gradient(#5e5fc9, #5ec9c9);
   padding: 20px;
   box-sizing: border-box;
-  overflow-y: auto; /* když obsah přesáhne výšku, lze scrollovat */
-  position: fixed; /* nebo 'relative', uvidíme co chceš, s fixed musíš řešit hlavně na mobile */
+  overflow-y: auto;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  padding-bottom: env(safe-area-inset-bottom, 20px); /* iPhone "brada" */
+  padding-bottom: env(safe-area-inset-bottom, 20px);
 }
+
 .sidebar nav {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 70px;
 }
+
 .sidebar nav a {
   text-decoration: none;
   color: #eff0f5;
@@ -48,11 +53,12 @@ main {
   transition: background 0.3s;
   filter: drop-shadow(2px 2px 2px black);
 }
+
 .sidebar ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
-  font-family: 'open sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 180%;
   display: flex;
   flex-direction: column;
@@ -60,55 +66,62 @@ main {
   padding-left: 35px;
   font-weight: bold;
 }
+
 .sidebar li {
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 .sidebar img.icons_nav {
   width: 35px;
 }
+
 .sidebar img.main_logo {
-  width: 240px; /* nebo jiná šířka, která ti vyhovuje */
-  height: auto; /* zachová poměr stran */
+  width: 240px;
+  height: auto;
   border-radius: 50px;
   user-select: none;
   pointer-events: none;
 }
+
 .sidebar h1.jmeno {
   font-size: 35px;
-  font-family: 'open sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: azure;
   text-align: center;
   font-weight: bolder;
 }
+
 li a:hover {
   color: #070707;
   transition: 0.2s;
 }
+
 .sidebar li img {
   transition: filter 0.3s;
 }
 
 .sidebar li:hover img {
-  fill: #dde6ff;
+  filter: brightness(1.2);
 }
 
 .hamburger {
-  display: none; /* defaultně skryté na desktopu */
+  display: none;
   position: fixed;
   top: 15px;
   left: 15px;
   background: transparent;
   border: none;
   font-size: 30px;
-  color: white;
+  color: #5e5fc9;
   cursor: pointer;
-  z-index: 20; /* nad sidebarem */
+  z-index: 100;
 }
+
 @media screen and (max-width: 768px) {
   body {
-    flex-direction: column; /* hlavní obsah pod sidebar nebo jinak */
+    flex-direction: column;
   }
 
   .hamburger {
@@ -116,17 +129,40 @@ li a:hover {
   }
 
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: -280px; /* skryté vlevo */
-    width: 280px;
-    height: 100vh;
-    transition: left 0.3s ease;
-    z-index: 20;
+    display: none;
   }
 
-  .sidebar.active {
-    left: 0;
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #5e5fc9;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 99;
+  }
+
+  .mobile-menu.active {
+    right: 0;
+    display: block;
+  }
+
+  .mobile-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobile-menu nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
   }
 
   main {
