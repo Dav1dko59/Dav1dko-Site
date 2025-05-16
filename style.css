@@ -105,7 +105,7 @@ li a:hover {
   .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* posunutý mimo obrazovku */
+    left: 100%; /* posunutý mimo obrazovku */
     width: 250px;
     height: 100vh;
     background-image: linear-gradient(#5e5fc9, #5ec9c9);
@@ -114,12 +114,13 @@ li a:hover {
     z-index: 15;
     overflow-y: auto;
     box-sizing: border-box;
-    padding-bottom: constant(safe-area-inset-bottom);
     padding-bottom: env(safe-area-inset-bottom, 20px);
   }
 
   .sidebar.active {
     left: 0; /* vysunutý viditelně */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* pro lepší scrollování na iOS */
   }
 
   main {
