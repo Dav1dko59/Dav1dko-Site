@@ -115,7 +115,7 @@ li a:hover {
     overflow-y: auto;
     box-sizing: border-box;
     padding-bottom: constant(safe-area-inset-bottom);
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom, 20px);
   }
 
   .sidebar.active {
