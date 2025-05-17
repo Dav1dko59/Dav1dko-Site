@@ -260,7 +260,7 @@ hr.cara {
     transition: color 0.3s ease;
     cursor: pointer;
     position: relative;
-    top: 80%;
+    top: 50px;
   }
 }
 .nav-link.active {
