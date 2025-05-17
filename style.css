@@ -37,12 +37,25 @@ main {
   z-index: 10;
   padding-bottom: env(safe-area-inset-bottom, 20px);
 }
+.instagram {
+  width: 15%;
+  height: auto;
+  margin: 5% auto 0;
+  display: block;
+  color: black; /* nastavíš barvu přes color */
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.instagram:hover {
+  filter: brightness(0) invert(1) saturate(5) contrast(2);
+}
 
 .sidebar nav {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 70px;
+  margin-top: 10%;
 }
 
 .sidebar nav a {
@@ -109,8 +122,8 @@ li a:hover {
 .hamburger {
   display: none;
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 5px;
+  left: 10px;
   background: transparent;
   border: none;
   font-size: 30px;
@@ -239,6 +252,16 @@ hr.cara {
     gap: 20px;
     padding-left: 35px;
     font-weight: bold;
+  }
+  .mobile-menu img.instagram {
+    width: 15%;
+    height: auto;
+
+    display: block;
+    color: black; /* nastavíš barvu přes color */
+    transition: color 0.3s ease;
+    cursor: pointer;
+    margin-top: 50%;
   }
 }
 .nav-link.active {
