@@ -165,7 +165,7 @@ hr.cara {
     align-items: center;
   }
   nav {
-    margin-top: auto;
+    margin-top: 10px;
   }
 
   .mobile-menu.active {
@@ -176,7 +176,7 @@ hr.cara {
   .mobile-menu nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 20%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -194,7 +194,7 @@ hr.cara {
     height: 100vh;
   }
   .mobile-menu img.logo_menu {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 50px;
   }
@@ -208,11 +208,11 @@ hr.cara {
     width: 100%;
   }
   .mobile-menu hr.cara_menu {
-    margin-top: 5%;
+    margin-top: 2%;
 
     align-items: center;
     width: 70%;
-    margin-bottom: 0%;
+    margin-bottom: -20%;
     margin-left: auto;
     margin-right: auto;
     border-top: 2.5px solid #eff0f5;
