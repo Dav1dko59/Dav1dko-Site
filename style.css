@@ -243,7 +243,6 @@ hr.cara {
   }
   .mobile-menu ul {
     list-style: none;
-    padding-left: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 180%;
@@ -254,14 +253,14 @@ hr.cara {
     font-weight: bold;
   }
   .mobile-menu img.instagram {
-    width: 15%;
+    width: 45px;
     height: auto;
-
     display: block;
     color: black; /* nastavíš barvu přes color */
     transition: color 0.3s ease;
     cursor: pointer;
-    margin-top: 50%;
+    position: relative;
+    top: 80%;
   }
 }
 .nav-link.active {
