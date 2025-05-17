@@ -91,44 +91,41 @@
     </main>
 
     <script>
-      const hamburger = document.querySelector('.hamburger');
-      const mobileMenu = document.getElementById('mobileMenu');
-
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-      });
-      const sections = document.querySelectorAll('main section');
-      const navLinks = document.querySelectorAll('.nav-link');
-
-      window.addEventListener('scroll', () => {
-        let current = '';
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (pageYOffset >= sectionTop - sectionHeight / 3) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-          }
-        });
-      });
       document.addEventListener('DOMContentLoaded', () => {
-        const menu = document.getElementById('mobileMenu');
-        const toggleBtn = document.getElementById('menuToggle');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-        toggleBtn.addEventListener('click', () => {
-          menu.classList.toggle('open');
+        // Otevření / zavření menu hamburgerem
+        hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
         });
 
-        menu.querySelectorAll('a').forEach((link) => {
+        // Zavření menu po kliknutí na odkaz v menu
+        navLinks.forEach((link) => {
           link.addEventListener('click', () => {
-            menu.classList.remove('open');
+            mobileMenu.classList.remove('active');
+          });
+        });
+
+        // Zbytek tvého kódu pro scrollování a aktivní odkaz:
+        const sections = document.querySelectorAll('main section');
+        window.addEventListener('scroll', () => {
+          let current = '';
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+              link.classList.add('active');
+            }
           });
         });
       });
