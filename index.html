@@ -13,10 +13,12 @@
     <link rel="apple-touch-icon" href="images/favicon.svg" />
   </head>
   <body>
-    <button class="hamburger" aria-label="Otevřít menu">☰</button>
+    <button class="hamburger" id="menuToggle" aria-label="Otevřít menu">
+      ☰
+    </button>
 
     <div class="sidebar">
-      <img src="images/LOGO.png" alt="logo" class="main_logo" />
+      <img src="images/LOGO.webp" alt="logo" class="main_logo" />
       <h1 class="jmeno">David Janoušek</h1>
       <hr class="cara" />
       <nav>
@@ -26,28 +28,28 @@
               src="images/home_icon.svg"
               alt="home_icon"
               class="icons_nav"
-            /><a href="#home">Domů</a>
+            /><a href="#home" class="nav-link">Domů</a>
           </li>
           <li>
             <img
               src="images/user_icon.svg"
               alt="user_icon"
               class="icons_nav"
-            /><a href="#about">O mně</a>
+            /><a href="#about" class="nav-link">O mně</a>
           </li>
           <li>
             <img
               src="images/projects_icon.svg"
               alt="projects_icon"
               class="icons_nav"
-            /><a href="#">Projekty</a>
+            /><a href="#projects" class="nav-link">Projekty</a>
           </li>
           <li>
             <img
               src="images/contact_icon.svg"
               alt="contact_icon"
               class="icons_nav"
-            /><a href="#">Kontakt</a>
+            /><a href="#contact" class="nav-link">Kontakt</a>
           </li>
         </ul>
       </nav>
@@ -55,32 +57,36 @@
 
     <div class="mobile-menu" id="mobileMenu">
       <div class="header-content">
-        <img src="images/LOGO.png" alt="logo_menu" class="logo_menu" />
+        <img src="images/LOGO.webp" alt="logo_menu" class="logo_menu" />
         <h1 class="jmeno_menu">David Janoušek</h1>
         <hr class="cara_menu" />
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Domů</a></li>
-          <li><a href="#about">O mně</a></li>
-          <li><a href="#">Projekty</a></li>
-          <li><a href="#">Kontakt</a></li>
+          <li><a href="#home" class="nav-link">Domů</a></li>
+          <li><a href="#about" class="nav-link">O mně</a></li>
+          <li><a href="#projects" class="nav-link">Projekty</a></li>
+          <li><a href="#contact" class="nav-link">Kontakt</a></li>
         </ul>
       </nav>
     </div>
 
     <main>
-      <section
-        id="home"
-        style="height: 100vh; background: lightblue"
-        class="section_home"
-      >
+      <section id="home" style="height: 100vh; background: lightblue">
         <h2>Domů</h2>
         <p>Vítej na mém portfoliu!</p>
       </section>
       <section id="about" style="height: 100vh; background: white">
         <h2>O mně</h2>
         <p>Jsem David, programátor a webový nadšenec. Tady je něco o mně...</p>
+      </section>
+      <section id="projects" style="height: 100vh; background: lightblue">
+        <h2>Projekty</h2>
+        <p>Projekty:</p>
+      </section>
+      <section id="contact" style="height: 100vh; background: white">
+        <h2>Kontakt</h2>
+        <p>Kontakt</p>
       </section>
     </main>
 
@@ -90,6 +96,41 @@
 
       hamburger.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
+      });
+      const sections = document.querySelectorAll('main section');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+      document.addEventListener('DOMContentLoaded', () => {
+        const menu = document.getElementById('mobileMenu');
+        const toggleBtn = document.getElementById('menuToggle');
+
+        toggleBtn.addEventListener('click', () => {
+          menu.classList.toggle('open');
+        });
+
+        menu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('open');
+          });
+        });
       });
     </script>
   </body>

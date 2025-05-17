@@ -239,3 +239,8 @@ hr.cara {
     font-weight: bold;
   }
 }
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  color: #fff;
+}
